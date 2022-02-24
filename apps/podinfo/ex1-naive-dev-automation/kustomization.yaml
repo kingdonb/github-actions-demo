@@ -1,16 +1,13 @@
 apiVersion: kustomize.config.k8s.io/v1beta1
 kind: Kustomization
 namespace: ex1
-
 resources:
 - gitrepo.yaml
 - imagerepo.yaml
 - imagepolicy.yaml
 - imageupdate.yaml
 - flux-system-gitrepo.yaml
-
 - github.com/kingdonb/podinfo//deploy/overlays/dev?ref=flux-gha-demo
-
 patchesStrategicMerge:
 - |-
   $patch: delete
@@ -18,8 +15,7 @@ patchesStrategicMerge:
   kind: Namespace
   metadata:
     name: dev
-
 images:
-  - name: ghcr.io/kingdonb/podinfo
-    newName: ghcr.io/kingdonb/podinfo # {"$imagepolicy": "ex1:dev-policy:name"}
-    newTag: 6.0.0 # {"$imagepolicy": "ex1:dev-policy:tag"}
+- name: ghcr.io/kingdonb/podinfo
+  newName: ghcr.io/kingdonb/podinfo # {"$imagepolicy": "ex1:dev-policy:name"}
+  newTag: flux-gha-demo-1645678300-1ad5ae0e # {"$imagepolicy": "ex1:dev-policy:tag"}
