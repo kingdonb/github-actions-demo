@@ -18,4 +18,4 @@ patchesStrategicMerge:
 images:
 - name: ghcr.io/kingdonb/podinfo
   newName: ghcr.io/kingdonb/podinfo # {"$imagepolicy": "ex3:prod-policy:name"}
-  newTag: 6.0.4-rc1 # {"$imagepolicy": "ex3:prod-policy:tag"}
+  newTag: 6.0.4 # {"$imagepolicy": "ex3:prod-policy:tag"}
