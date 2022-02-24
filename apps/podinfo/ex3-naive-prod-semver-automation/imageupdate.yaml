@@ -1,7 +1,7 @@
 apiVersion: image.toolkit.fluxcd.io/v1beta1
 kind: ImageUpdateAutomation
 metadata:
-  name: stg-update
+  name: prod-update
   namespace: ex3
 spec:
   interval: 1m0s
