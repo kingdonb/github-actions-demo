@@ -17,6 +17,7 @@ metadata:
   name: ex2
   namespace: ex2
 spec:
+  suspend: true
   interval: 1m0s
   timeout: 15s
   dependsOn:
