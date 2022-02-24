@@ -7,7 +7,7 @@ spec:
   interval: 5m
   sourceRef:
     kind: GitRepository
-    name: flux-gha-demo
+    name: podinfo-gha-demo
   path: ./deploy/overlays/dev
   targetNamespace: ex1
   prune: true
