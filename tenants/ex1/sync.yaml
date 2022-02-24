@@ -17,7 +17,7 @@ metadata:
   name: ex1
   namespace: ex1
 spec:
-  suspend: true
+  suspend: false
   interval: 1m0s
   timeout: 15s
   dependsOn:
