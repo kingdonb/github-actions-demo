@@ -53,4 +53,4 @@ The `podinfo` examples in this repository show a few different methods of automa
 
 The Podinfo repository drives GitHub Actions. This is a combined demonstration of GitHub Actions and Flux.
 
-Find the podinfo fork that I have marked up with those examples [here][FIXME].
+Find the podinfo fork that I have marked up with those examples [here](https://github.com/kingdonb/podinfo/tree/master/.github/workflows#readme).

@@ -15,20 +15,20 @@ These are framed as three separate examples, and they can each be adopted or rej
 into one example.  This is an easy and complete approach to environment promotion that is straightforward and no-frills. It is driven with familiar Git
 branching and tagging that should be easy for anyone already familiar with Flux to follow.
 
-* `ex1-naive-dev-automation/`
+* `ex1-naive-dev-automation/` - [link][FIXME]
 In the dev environment, the latest image is deployed, based on a timestamp. This is an appropriate config for rapid iteration and might be adapted for production.
 
-* `ex2-naive-test-semver-automation/`
+* `ex2-naive-test-semver-automation/` - [link][FIXME]
 In this example, the latest release or pre-release candidate image is deployed, based on a semver expression. Consider using this approach in a staging environment.
 
-* `ex3-naive-prod-semver-automation/`
+* `ex3-naive-prod-semver-automation/` - [link][FIXME]
 In this example, the latest semantic version release image is deployed, based on a semver `ImagePolicy`. This approach can work in Production if you know the caveats.
 
 (However, for a few reasons this "naive" approach is potentially somewhat problematic, as subsequent examples will elaborate with specific detail.)
 
 ##### Atomic (Non-naïve) Releases
 
-* `ex4-atomic-git-semver-tag-automation/`
+* `ex4-atomic-git-semver-tag-automation/` - [link][FIXME]
 This is perhaps the easiest approach to conceptualize. If:
 
 ```
@@ -42,7 +42,7 @@ See how this approach is offloading some responsibility without really ceding an
 
 We can use a Kustomize overlay to patch and make some local changes, without touching the upstream.
 
-* `ex5-atomic-helmrelease-from-helmrepo/`
+* `ex5-atomic-helmrelease-from-helmrepo/` - [link][FIXME]
 This approach is more complicated to set up, mainly because you will need to publish your charts to a Helm Repository.
 
 The Helm Repository is Helm's native artifact repository, and it works better with Helm features like rollback and versioning. This is more in line with the
@@ -52,7 +52,7 @@ We choose a version to use at install time, and declaratively pass values in via
 
 This works much like any Helm user does imperatively with `helm upgrade --set` or `helm install --values`. Now, about those values...
 
-* `ex6-helmrelease-from-gitrepo-with-gitvalues/`
+* `ex6-helmrelease-from-gitrepo-with-gitvalues/` - [link][FIXME]
 
 Say we have decided to use a `GitRepository` to host our Helm chart, and we decided we want to store our `values` there as well. Actually, that's not given
 (you might use this example with a `HelmRepository` and it works just fine.)
@@ -77,4 +77,5 @@ For the GitHub Actions examples, see:
 
 #### podinfo application repository
 
-[link][FIXME]
+* [podinfo repository link](https://github.com/kingdonb/podinfo/)
+* [workflows](https://github.com/kingdonb/podinfo/tree/master/.github/workflows#readme)
