@@ -1,0 +1,10 @@
+---
+apiVersion: source.toolkit.fluxcd.io/v1beta1
+kind: HelmRepository
+metadata:
+  name: podinfo
+  namespace: ex5
+spec:
+  interval: 10m0s
+  url: https://stefanprodan.github.io/podinfo
+

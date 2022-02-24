@@ -49,3 +49,16 @@ spec:
     name: flux-system
   path: ./tenants/ex4
   prune: true
+---
+apiVersion: kustomize.toolkit.fluxcd.io/v1beta2
+kind: Kustomization
+metadata:
+  name: tenant-ex5
+  namespace: flux-system
+spec:
+  interval: 5m
+  sourceRef:
+    kind: GitRepository
+    name: flux-system
+  path: ./tenants/ex5
+  prune: true
