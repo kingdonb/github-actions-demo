@@ -16,6 +16,10 @@ spec:
   patches:
     - patch: |
         $patch: delete
+        apiVersion: v1
+        kind: Namespace
+        metadata:
+          name: all
       target:
         kind: Namespace
         name: dev
