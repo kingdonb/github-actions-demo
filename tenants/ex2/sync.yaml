@@ -19,6 +19,9 @@ metadata:
 spec:
   interval: 1m0s
   timeout: 15s
+  dependsOn:
+    - name: flux-system
+      namespace: flux-system
   path: ./apps/podinfo/ex2-naive-test-semver-automation
   prune: true
   serviceAccountName: ex2
