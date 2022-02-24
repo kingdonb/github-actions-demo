@@ -1,0 +1,31 @@
+---
+apiVersion: source.toolkit.fluxcd.io/v1beta1
+kind: GitRepository
+metadata:
+  name: ex3
+  namespace: ex3
+spec:
+  interval: 1m0s
+  ref:
+    branch: main
+  url: https://github.com/kingdonb/github-actions-demo
+
+---
+apiVersion: kustomize.toolkit.fluxcd.io/v1beta2
+kind: Kustomization
+metadata:
+  name: ex3
+  namespace: ex3
+spec:
+  interval: 1m0s
+  timeout: 15s
+  dependsOn:
+    - name: flux-system
+      namespace: flux-system
+  path: ./apps/podinfo/ex3-naive-prod-semver-automation
+  prune: true
+  serviceAccountName: ex3
+  sourceRef:
+    kind: GitRepository
+    name: ex3
+
