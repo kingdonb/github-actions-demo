@@ -6,6 +6,7 @@ resources:
 - gitrepo.yaml
 - imagerepo.yaml
 - imagepolicy.yaml
+- imageupdate.yaml
 - github.com/kingdonb/podinfo//deploy/overlays/dev?ref=flux-gha-demo
 
 patchesStrategicMerge:
@@ -19,4 +20,4 @@ patchesStrategicMerge:
 images:
   - name: ghcr.io/kingdonb/podinfo
     newName: ghcr.io/kingdonb/podinfo
-    newTag: 6.0.0
+    newTag: 6.0.0 # {"$imagepolicy": "ex1:dev-update:tag"}
