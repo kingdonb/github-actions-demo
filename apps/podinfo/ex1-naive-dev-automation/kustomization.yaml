@@ -5,6 +5,7 @@ namespace: ex1
 resources:
 - gitrepo.yaml
 - imagerepo.yaml
+- imagepolicy.yaml
 - github.com/kingdonb/podinfo//deploy/overlays/dev?ref=flux-gha-demo
 
 patchesStrategicMerge:
