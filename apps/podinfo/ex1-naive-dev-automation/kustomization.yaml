@@ -5,6 +5,7 @@ namespace: ex1
 resources:
 - gitrepo.yaml
 - github.com/kingdonb/podinfo//deploy/overlays/dev
-patchesStrategicMerge:
+patches:
 - frontend-patch.yaml
 - backend-patch.yaml
+- delete-namespace-patch.yaml
