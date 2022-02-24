@@ -4,8 +4,12 @@ namespace: ex1
 
 resources:
 - gitrepo.yaml
-- github.com/kingdonb/podinfo//deploy/overlays/dev
+- github.com/kingdonb/podinfo//deploy/overlays/dev?ref=flux-gha-demo
+
 patches:
-- frontend-patch.yaml
-- backend-patch.yaml
 - delete-namespace-patch.yaml
+
+images:
+  - name: ghcr.io/kingdonb/podinfo
+    newName: ghcr.io/kingdonb/podinfo
+    newTag: 6.0.0
