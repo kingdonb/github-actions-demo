@@ -1,0 +1,17 @@
+# k create ingress --dry-run=client -oyaml ex1-podinfo --rule="ex1-podinfo/*=frontend:80" | k neat
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: ex1-podinfo
+spec:
+  rules:
+  - host: ex1-podinfo
+    http:
+      paths:
+      - backend:
+          service:
+            name: frontend
+            port:
+              number: 80
+        path: /
+        pathType: Prefix
