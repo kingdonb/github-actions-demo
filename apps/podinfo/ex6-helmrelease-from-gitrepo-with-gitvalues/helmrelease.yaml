@@ -12,7 +12,8 @@ spec:
         kind: GitRepository
         name: podinfo-gha-demo
       version: '>=6.0.0' # not used
-  interval: 1m0s
+  interval: 2m0s
+  timeout: 1m0s
   releaseName: podinfo
   serviceAccountName: ex6
   valuesFrom:
