@@ -1,14 +1,15 @@
-apiVersion: kustomize.toolkit.fluxcd.io/v1beta2
-kind: Kustomization
-metadata:
-  name: podinfo
-  namespace: ex1
-spec:
-  interval: 5m
-  timeout: 1m
-  sourceRef:
-    kind: GitRepository
-    name: podinfo-gha-demo
-  path: ./deploy/overlays/dev
-  targetNamespace: ex1
-  prune: true
+## Not Used
+# apiVersion: kustomize.toolkit.fluxcd.io/v1beta2
+# kind: Kustomization
+# metadata:
+#   name: podinfo
+#   namespace: ex1
+# spec:
+#   interval: 5m
+#   timeout: 1m
+#   sourceRef:
+#     kind: GitRepository
+#     name: podinfo-gha-demo
+#   path: ./deploy/overlays/dev
+#   targetNamespace: ex1
+#   prune: true
