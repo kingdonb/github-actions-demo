@@ -13,3 +13,9 @@ spec:
   targetNamespace: ex4
   serviceAccountName: ex4
   prune: true
+  patches:
+    - patch: |
+        $patch: delete
+      target:
+        kind: Namespace
+        name: dev
