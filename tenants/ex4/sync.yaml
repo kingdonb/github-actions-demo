@@ -1,0 +1,31 @@
+---
+apiVersion: source.toolkit.fluxcd.io/v1beta1
+kind: GitRepository
+metadata:
+  name: ex4
+  namespace: ex4
+spec:
+  interval: 1m0s
+  ref:
+    branch: main
+  url: https://github.com/kingdonb/github-actions-demo
+
+---
+apiVersion: kustomize.toolkit.fluxcd.io/v1beta2
+kind: Kustomization
+metadata:
+  name: ex4
+  namespace: ex4
+spec:
+  interval: 1m0s
+  timeout: 15s
+  dependsOn:
+    - name: flux-system
+      namespace: flux-system
+  path: ./apps/podinfo/ex4-atomic-git-semver-tag-automation
+  prune: true
+  serviceAccountName: ex4
+  sourceRef:
+    kind: GitRepository
+    name: ex4
+

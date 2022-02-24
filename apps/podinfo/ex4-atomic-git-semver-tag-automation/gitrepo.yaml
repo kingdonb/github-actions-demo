@@ -1,0 +1,11 @@
+---
+apiVersion: source.toolkit.fluxcd.io/v1beta1
+kind: GitRepository
+metadata:
+  name: podinfo-gha-demo
+  namespace: ex4
+spec:
+  interval: 15s
+  ref:
+    semver: ^6.0.0
+  url: https://github.com/kingdonb/podinfo
