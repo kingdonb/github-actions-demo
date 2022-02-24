@@ -20,7 +20,7 @@ spec:
   interval: 1m0s
   timeout: 15s
   path: ./apps/podinfo/ex1-naive-dev-automation
-  prune: false
+  prune: true
   serviceAccountName: ex1
   sourceRef:
     kind: GitRepository
