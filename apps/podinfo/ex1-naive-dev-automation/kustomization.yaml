@@ -6,8 +6,13 @@ resources:
 - gitrepo.yaml
 - github.com/kingdonb/podinfo//deploy/overlays/dev?ref=flux-gha-demo
 
-patches:
-- delete-namespace-patch.yaml
+patchesStrategicMerge:
+- |-
+  $patch: delete
+  apiVersion: v1
+  kind: Namespace
+  metadata:
+    name: dev
 
 images:
   - name: ghcr.io/kingdonb/podinfo
