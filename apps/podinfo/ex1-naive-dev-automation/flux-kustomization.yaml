@@ -5,6 +5,7 @@ metadata:
   namespace: ex1
 spec:
   interval: 5m
+  timeout: 1m
   sourceRef:
     kind: GitRepository
     name: podinfo-gha-demo
