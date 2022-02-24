@@ -20,5 +20,5 @@ spec:
     push:
       branch: main
   update:
-    path: ./apps/podinfo/ex1-naive-dev-automation
+    path: ./apps/podinfo
     strategy: Setters
