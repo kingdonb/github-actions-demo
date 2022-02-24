@@ -1,0 +1,11 @@
+apiVersion: image.toolkit.fluxcd.io/v1beta1
+kind: ImagePolicy
+metadata:
+  name: stg-policy
+  namespace: ex2
+spec:
+  imageRepositoryRef:
+    name: podinfo
+  policy:
+    semver:
+      range: ^6.0.0-0

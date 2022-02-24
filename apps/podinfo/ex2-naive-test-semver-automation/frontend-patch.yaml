@@ -1,0 +1,15 @@
+## Not Used
+# apiVersion: apps/v1
+# kind: Deployment
+# metadata:
+#   name: frontend
+#   namespace: dev
+# spec:
+#   template:
+#     spec:
+#       containers:
+#       - env:
+#         - name: PODINFO_UI_COLOR
+#           value: '#34577c'
+#         image: ghcr.io/kingdonb/podinfo:6.0.3
+#         name: frontend
