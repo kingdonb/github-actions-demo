@@ -1,0 +1,31 @@
+---
+apiVersion: source.toolkit.fluxcd.io/v1beta1
+kind: GitRepository
+metadata:
+  name: ex5
+  namespace: ex5
+spec:
+  interval: 1m0s
+  ref:
+    branch: main
+  url: https://github.com/kingdonb/github-actions-demo
+
+---
+apiVersion: kustomize.toolkit.fluxcd.io/v1beta2
+kind: Kustomization
+metadata:
+  name: ex5
+  namespace: ex5
+spec:
+  interval: 1m0s
+  timeout: 15s
+  dependsOn:
+    - name: flux-system
+      namespace: flux-system
+  path: ./apps/podinfo/ex5-atomic-helmrelease-from-helmrepo
+  prune: true
+  serviceAccountName: ex5
+  sourceRef:
+    kind: GitRepository
+    name: ex5
+

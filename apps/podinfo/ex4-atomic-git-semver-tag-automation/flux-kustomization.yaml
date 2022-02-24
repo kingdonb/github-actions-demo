@@ -11,4 +11,5 @@ spec:
     name: podinfo-gha-demo
   path: ./deploy/overlays/dev
   targetNamespace: ex4
+  serviceAccountName: ex4
   prune: true
