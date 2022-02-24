@@ -1,4 +1,6 @@
 replicaCount: 2
+image:
+  tag: 6.0.5
 resources:
   limits:
     memory: 256Mi
