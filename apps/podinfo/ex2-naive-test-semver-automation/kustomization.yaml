@@ -18,4 +18,4 @@ patchesStrategicMerge:
 images:
 - name: ghcr.io/kingdonb/podinfo
   newName: ghcr.io/kingdonb/podinfo # {"$imagepolicy": "ex2:stg-policy:name"}
-  newTag: flux-gha-demo-1645678300-1ad5ae0e # {"$imagepolicy": "ex2:stg-policy:tag"}
+  newTag: 6.0.4-rc1 # {"$imagepolicy": "ex2:stg-policy:tag"}
