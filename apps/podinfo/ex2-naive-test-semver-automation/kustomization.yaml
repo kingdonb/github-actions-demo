@@ -7,7 +7,7 @@ resources:
 - imagepolicy.yaml
 - imageupdate.yaml
 - flux-system-gitrepo.yaml
-- github.com/kingdonb/podinfo//deploy/overlays/staging?ref=main
+- github.com/kingdonb/podinfo//deploy/overlays/staging?ref=flux-gha-demo
 patchesStrategicMerge:
 - |-
   $patch: delete
