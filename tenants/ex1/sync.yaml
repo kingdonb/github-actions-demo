@@ -18,6 +18,7 @@ metadata:
   namespace: ex1
 spec:
   interval: 1m0s
+  timeout: 15s
   path: ./apps/podinfo/ex1-naive-dev-automation
   prune: false
   serviceAccountName: ex1
