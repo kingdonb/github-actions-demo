@@ -3,3 +3,42 @@ kind: Kustomization
 resources:
 - gotk-components.yaml
 - gotk-sync.yaml
+patchesStrategicMerge:  # these are tuned for demonstration and debugging
+- |-
+  apiVersion: kustomize.toolkit.fluxcd.io/v1beta2
+  kind: Kustomization
+  metadata:
+    name: flux-system
+    namespace: flux-system
+  spec:
+    interval: 1m    # fast reconciling interval for flux-system kustomization
+    patches:
+    - target:
+        version: v1
+        group: apps
+        kind: Deployment
+        name: notification-controller
+        namespace: flux-system
+      patch: |-
+        - op: add
+          path: /spec/template/spec/containers/0/args/-
+          value: --rate-limit-interval=10s  # do not discard messages that are sent again after 10s+
+    - target:
+        version: v1
+        group: apps
+        kind: Deployment
+        name: kustomize-controller
+        namespace: flux-system
+      patch: |-
+        - op: add
+          path: /spec/template/spec/containers/0/args/-
+          value: --requeue-dependency=15s   # reduce the amount of time spent waiting for dependencies
+        - op: add
+          path: /spec/template/spec/containers/0/args/0
+          value: --concurrent=6             # increase the number of Kustomizations processed at once
+        - op: replace
+          path: /spec/template/spec/containers/0/resources/limits/cpu
+          value: "2"                        # allow KC access to more CPU
+        - op: replace
+          path: /spec/template/spec/containers/0/resources/limits/memory
+          value: "2Gi"                      # allow KC access to more memory
