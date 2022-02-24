@@ -1,0 +1,21 @@
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+namespace: ex2
+resources:
+- gitrepo.yaml
+- imagerepo.yaml
+- imagepolicy.yaml
+- imageupdate.yaml
+- flux-system-gitrepo.yaml
+- github.com/kingdonb/podinfo//deploy/overlays/staging?ref=main
+patchesStrategicMerge:
+- |-
+  $patch: delete
+  apiVersion: v1
+  kind: Namespace
+  metadata:
+    name: staging
+images:
+- name: ghcr.io/kingdonb/podinfo
+  newName: ghcr.io/kingdonb/podinfo # {"$imagepolicy": "ex2:stg-policy:name"}
+  newTag: flux-gha-demo-1645678300-1ad5ae0e # {"$imagepolicy": "ex2:stg-policy:tag"}
