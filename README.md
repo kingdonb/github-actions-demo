@@ -19,6 +19,19 @@ Thanks Weaveworks for hosting (the YouTube link will go [here][FIXME] when it's 
 
 * [GitOps with GitHub Actions and Flux by Kingdon Barrett](https://www.meetup.com/Weave-User-Group/events/284000198/)
 
+### `tl;dr`:
+
+```
+flux bootstrap github              \
+  --context=rancher-desktop        \
+  --owner=${GITHUB_USER}           \
+  --repository=github-actions-demo \
+  --branch=main                    \
+  --personal                       \
+  --path=clusters/rancher          \
+  --components-extra=image-automation-controller,image-reflector-controller
+```
+
 #### Other Notes
 
 The structure of this repository is based on:
