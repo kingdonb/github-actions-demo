@@ -139,3 +139,10 @@ For the GitHub Actions examples, see:
 
 * [podinfo repository link](https://github.com/kingdonb/podinfo/)
 * [workflows](https://github.com/kingdonb/podinfo/tree/master/.github/workflows#readme)
+
+##### Bonus Edition: Manifest and Boilerplate Generation
+
+ex7-helmrelease-from-gitrepo-with-gitspec/
+ex8-image-automation-without-boilerplate/
+ex9-helmrelease-gitrepo-automated-imagely/
+ex10-git-monorepo-helmchart-successfully/

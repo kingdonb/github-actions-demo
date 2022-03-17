@@ -1,0 +1,38 @@
+---
+apiVersion: source.toolkit.fluxcd.io/v1beta1
+kind: GitRepository
+metadata:
+  name: ex7
+  namespace: ex7
+spec:
+  interval: 1m0s
+  ref:
+    branch: main
+  url: https://github.com/kingdonb/github-actions-demo
+
+---
+apiVersion: kustomize.toolkit.fluxcd.io/v1beta2
+kind: Kustomization
+metadata:
+  name: ex7
+  namespace: ex7
+spec:
+  suspend: false
+  interval: 1m0s
+  timeout: 15s
+  dependsOn:
+    - name: flux-system
+      namespace: flux-system
+  path: ./apps/podinfo/ex7-helmrelease-from-gitrepo-with-gitspec
+  postBuild:
+    substituteFrom:
+      - kind: ConfigMap
+        name: podinfo-config
+        # Use this ConfigMap if it exists, but proceed if it doesn't.
+        optional: true
+  prune: true
+  serviceAccountName: ex7
+  sourceRef:
+    kind: GitRepository
+    name: ex7
+

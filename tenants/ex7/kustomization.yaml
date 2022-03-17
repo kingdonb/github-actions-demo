@@ -1,0 +1,11 @@
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+namespace: ex7
+resources:
+- sync.yaml
+configMapGenerator:
+  - name: podinfo-config
+    literals:
+    - SEMVER_TAG=6.0.6
+configurations:
+  - kustomizeconfig.yaml

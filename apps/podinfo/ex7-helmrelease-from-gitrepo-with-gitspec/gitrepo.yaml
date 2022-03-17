@@ -1,0 +1,11 @@
+---
+apiVersion: source.toolkit.fluxcd.io/v1beta1
+kind: GitRepository
+metadata:
+  name: podinfo
+  namespace: podinfo
+spec:
+  interval: 1m0s
+  ref:
+    semver: ${VERSION}
+  url: https://github.com/kingdonb/podinfo.git

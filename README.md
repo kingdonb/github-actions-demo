@@ -13,7 +13,7 @@ See:
 
 This repository is a demonstration of several Flux update automation techniques. Thanks for your attention, and I hope you enjoy!
 
-Thanks Weaveworks for hosting (the YouTube link will go [here][FIXME] when it's posted.)
+Thanks Weaveworks for hosting (the YouTube link is [here](https://www.youtube.com/watch?v=cR2eCMbiZg4).)
 
 ##### Meetup on Thursday, February 24, 2022
 
