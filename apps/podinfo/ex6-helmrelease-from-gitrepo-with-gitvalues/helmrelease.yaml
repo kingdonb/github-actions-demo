@@ -16,6 +16,8 @@ spec:
   timeout: 1m0s
   releaseName: podinfo
   serviceAccountName: ex6
+  values:
+    secretName: podinfo-values # for example
   valuesFrom:
     - kind: ConfigMap
       name: podinfo-values

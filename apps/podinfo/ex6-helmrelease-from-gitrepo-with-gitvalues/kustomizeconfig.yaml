@@ -4,3 +4,5 @@ nameReference:
   fieldSpecs:
   - path: spec/valuesFrom/name
     kind: HelmRelease
+  - path: spec/values/secretName
+    kind: HelmRelease
