@@ -15,7 +15,7 @@ This repository is a demonstration of several Flux update automation techniques.
 
 Thanks Weaveworks for hosting (the YouTube link is [here](https://www.youtube.com/watch?v=cR2eCMbiZg4).)
 
-##### Meetup on Thursday, February 24, 2022
+##### PAST: Meetup on Thursday, February 24, 2022
 
 * [GitOps with GitHub Actions and Flux by Kingdon Barrett](https://www.meetup.com/Weave-User-Group/events/284000198/)
 
@@ -54,3 +54,9 @@ The `podinfo` examples in this repository show a few different methods of automa
 The Podinfo repository drives GitHub Actions. This is a combined demonstration of GitHub Actions and Flux.
 
 Find the podinfo fork that I have marked up with those examples [here](https://github.com/kingdonb/podinfo/tree/master/.github/workflows#readme).
+
+#### Other Resources
+
+##### PAST: AKS Meetup on Thursday, April 7, 2022
+
+* [GitOps with Flux on AKS](https://www.youtube.com/watch?v=hoD5-I4DjNY)

@@ -1,10 +1,10 @@
 apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
-  name: ex6-podinfo
+  name: ex7-podinfo
 spec:
   rules:
-  - host: ex6-podinfo
+  - host: ex7-podinfo
     http:
       paths:
       - backend:

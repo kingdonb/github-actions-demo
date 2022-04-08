@@ -23,7 +23,7 @@ spec:
   dependsOn:
     - name: flux-system
       namespace: flux-system
-  path: ./apps/podinfo/ex6-helmrelease-from-gitrepo-with-gitvalues
+  path: ./apps/podinfo/ex06-helmrelease-from-gitrepo-with-gitvalues
   prune: true
   serviceAccountName: ex6
   sourceRef:

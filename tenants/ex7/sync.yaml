@@ -23,7 +23,7 @@ spec:
   dependsOn:
     - name: flux-system
       namespace: flux-system
-  path: ./apps/podinfo/ex7-helmrelease-from-gitrepo-with-gitspec
+  path: ./apps/podinfo/ex07-helmrelease-from-gitrepo-with-gitspec
   postBuild:
     substituteFrom:
       - kind: ConfigMap

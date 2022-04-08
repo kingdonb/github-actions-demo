@@ -23,7 +23,7 @@ spec:
   dependsOn:
     - name: flux-system
       namespace: flux-system
-  path: ./apps/podinfo/ex1-naive-dev-automation
+  path: ./apps/podinfo/ex01-naive-dev-automation
   prune: true
   serviceAccountName: ex1
   sourceRef:
