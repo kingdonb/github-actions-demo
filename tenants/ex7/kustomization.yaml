@@ -3,3 +3,4 @@ kind: Kustomization
 namespace: ex7
 resources:
 - sync.yaml
+- automation.yaml

@@ -1,10 +1,16 @@
+Tl;dr: to activate the example, follow the instructions in `/tenants/ex7` to create an
+`ex7-writer` secret in the `ex7` namespace.
+
 #### The solution for Example 7 is derived from:
 
 [Manage Helm Releases: Refer to values in ConfigMaps generated with Kustomize](https://fluxcd.io/docs/guides/helmreleases/#refer-to-values-in-configmaps-generated-with-kustomize)
 
 and Example 6 which precededed this one. Also, a conversation I had with Steve Richards
 on the CNCF slack, where we came up with this idea. It's not really novel or surprising
-unless you haven't yet been exposed to all the required features to make this example.
+unless you haven't yet been exposed to all the required features to make this example,
+or haven't thought to plug them in together in this particular order.
+
+If this example is well received, we can lobby to add it to Flux docs. Hope you enjoy!
 
 ##### Pros and Cons of Examples 4 thru 6
 
@@ -75,7 +81,12 @@ when a release version ought to be pinned and/or un-pinned.
 By doing this in a shared repo, the decision and policy can be made transparent and
 easily updated at any time in either an automated way or with a manual Pull Request.
 
+##### Lean on App Dev Teams but Leave an Escape Hatch
+
 A large part of the release configuration is effectively divorced from the tenancy.
 The application team can define the default configuration inside of the application,
 merge in any special configuration when the app is loaded as a tenant, and set the
 version which can be maintained centrally, upstream from where tenants are created.
+
+And we've managed to do this without using any patch or features of Kustomize, only
+a single well-placed Variable Substitution that updates the GitRepository spec!

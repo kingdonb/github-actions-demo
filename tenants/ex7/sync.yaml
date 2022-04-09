@@ -2,13 +2,15 @@
 apiVersion: source.toolkit.fluxcd.io/v1beta1
 kind: GitRepository
 metadata:
-  name: ex7
+  name: ex7-writable
   namespace: ex7
 spec:
   interval: 1m0s
   ref:
     branch: main
-  url: https://github.com/kingdonb/github-actions-demo
+  url: ssh://git@github.com/kingdonb/github-actions-demo
+  secretRef:
+    name: ex7-writer
 
 ---
 apiVersion: kustomize.toolkit.fluxcd.io/v1beta2
