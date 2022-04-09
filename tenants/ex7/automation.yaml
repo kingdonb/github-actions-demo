@@ -27,7 +27,7 @@ metadata:
   name: podinfo
   namespace: flux-system
 spec:
-  image: kingdonb/podinfo
+  image: ghcr.io/kingdonb/podinfo
   interval: 1m0s
 
 ---
