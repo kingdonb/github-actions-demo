@@ -39,20 +39,20 @@ show they are all linked into one example.  This is an easy and complete approac
 and no-frills. It is driven with familiar Git branching and tagging that should be easy for anyone already familiar with Flux to
 follow.
 
-* `ex1-naive-dev-automation/` -
-  [link](https://github.com/kingdonb/github-actions-demo/tree/main/apps/podinfo/ex1-naive-dev-automation#readme)
+* `ex01-naive-dev-automation/` -
+  [link](https://github.com/kingdonb/github-actions-demo/tree/main/apps/podinfo/ex01-naive-dev-automation#readme)
 In the dev environment, the latest image is deployed, based on a timestamp.
 This is an appropriate config for rapid iteration and might be adapted for
 production.
 
-* `ex2-naive-test-semver-automation/` -
-  [link](https://github.com/kingdonb/github-actions-demo/tree/main/apps/podinfo/ex2-naive-test-semver-automation#readme)
+* `ex02-naive-test-semver-automation/` -
+  [link](https://github.com/kingdonb/github-actions-demo/tree/main/apps/podinfo/ex02-naive-test-semver-automation#readme)
 In this example, the latest release or pre-release candidate image is deployed,
 based on a semver expression. Consider using this approach in a staging
 environment.
 
-* `ex3-naive-prod-semver-automation/` -
-  [link](https://github.com/kingdonb/github-actions-demo/tree/main/apps/podinfo/ex3-naive-prod-semver-automation#readme)
+* `ex03-naive-prod-semver-automation/` -
+  [link](https://github.com/kingdonb/github-actions-demo/tree/main/apps/podinfo/ex03-naive-prod-semver-automation#readme)
 In this example, the latest semantic version release image is deployed, based
 on a semver `ImagePolicy`. This approach can work in Production if you know the
 caveats.
@@ -64,8 +64,8 @@ problematic, as subsequent examples will elaborate with specific detail.)
 
 ### Git tag-based SemVer Automation
 
-* `ex4-atomic-git-semver-tag-automation/` -
-  [link](https://github.com/kingdonb/github-actions-demo/tree/main/apps/podinfo/ex4-atomic-git-semver-tag-automation)
+* `ex04-atomic-git-semver-tag-automation/` -
+  [link](https://github.com/kingdonb/github-actions-demo/tree/main/apps/podinfo/ex04-atomic-git-semver-tag-automation)
 This is perhaps the easiest approach to conceptualize. If:
 
 ```
@@ -83,8 +83,8 @@ We can use a Kustomize overlay to patch and make some local changes, without tou
 
 ### HelmRelease with HelmRepository, SemVer Range
 
-* `ex5-atomic-helmrelease-from-helmrepo/` -
-  [link](https://github.com/kingdonb/github-actions-demo/tree/main/apps/podinfo/ex5-atomic-helmrelease-from-helmrepo#readme)
+* `ex05-atomic-helmrelease-from-helmrepo/` -
+  [link](https://github.com/kingdonb/github-actions-demo/tree/main/apps/podinfo/ex05-atomic-helmrelease-from-helmrepo#readme)
 This approach is more complicated to set up, mainly because you will need to publish your charts to a Helm Repository.
 
 The Helm Repository is Helm's native artifact repository, and it works better
@@ -100,8 +100,8 @@ or `helm install --values`. Now, about those values...
 
 ### Best Example - HelmRelease with Kustomize ConfigMap Generator
 
-* `ex6-helmrelease-from-gitrepo-with-gitvalues/` -
-  [link](https://github.com/kingdonb/github-actions-demo/tree/main/apps/podinfo/ex6-helmrelease-from-gitrepo-with-gitvalues)
+* `ex06-helmrelease-from-gitrepo-with-gitvalues/` -
+  [link](https://github.com/kingdonb/github-actions-demo/tree/main/apps/podinfo/ex06-helmrelease-from-gitrepo-with-gitvalues)
 
 Say we have decided to use a `GitRepository` to host our Helm chart, and we
 decided we want to store our `values` there as well. Actually, that's not given
@@ -142,7 +142,7 @@ For the GitHub Actions examples, see:
 
 ##### Bonus Edition: Manifest and Boilerplate Generation
 
-ex7-helmrelease-from-gitrepo-with-gitspec/
-ex8-image-automation-without-boilerplate/
-ex9-helmrelease-gitrepo-automated-imagely/
+ex07-helmrelease-from-gitrepo-with-gitspec/
+ex08-image-automation-without-boilerplate/
+ex09-helmrelease-gitrepo-automated-imagely/
 ex10-git-monorepo-helmchart-successfully/

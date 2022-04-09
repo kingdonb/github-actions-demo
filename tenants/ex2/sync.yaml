@@ -23,7 +23,7 @@ spec:
   dependsOn:
     - name: flux-system
       namespace: flux-system
-  path: ./apps/podinfo/ex2-naive-test-semver-automation
+  path: ./apps/podinfo/ex02-naive-test-semver-automation
   prune: true
   serviceAccountName: ex2
   sourceRef:

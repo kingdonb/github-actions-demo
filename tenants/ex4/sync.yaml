@@ -23,7 +23,7 @@ spec:
   dependsOn:
     - name: flux-system
       namespace: flux-system
-  path: ./apps/podinfo/ex4-atomic-git-semver-tag-automation
+  path: ./apps/podinfo/ex04-atomic-git-semver-tag-automation
   prune: true
   serviceAccountName: ex4
   sourceRef:

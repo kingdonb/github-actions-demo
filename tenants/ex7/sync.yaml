@@ -2,13 +2,15 @@
 apiVersion: source.toolkit.fluxcd.io/v1beta1
 kind: GitRepository
 metadata:
-  name: ex7
+  name: ex7-writable
   namespace: ex7
 spec:
   interval: 1m0s
   ref:
     branch: main
-  url: https://github.com/kingdonb/github-actions-demo
+  url: ssh://git@github.com/kingdonb/github-actions-demo
+  secretRef:
+    name: ex7-writer
 
 ---
 apiVersion: kustomize.toolkit.fluxcd.io/v1beta2
@@ -23,13 +25,10 @@ spec:
   dependsOn:
     - name: flux-system
       namespace: flux-system
-  path: ./apps/podinfo/ex7-helmrelease-from-gitrepo-with-gitspec
+  path: ./apps/podinfo/ex07-helmrelease-from-gitrepo-with-gitspec
   postBuild:
-    substituteFrom:
-      - kind: ConfigMap
-        name: podinfo-config
-        # Use this ConfigMap if it exists, but proceed if it doesn't.
-        optional: true
+    substitute:
+      SEMVER_TAG: v1.7.3  # {"$imagepolicy": "ex7:latest-release:tag"}
   prune: true
   serviceAccountName: ex7
   sourceRef:

@@ -23,7 +23,7 @@ spec:
   dependsOn:
     - name: flux-system
       namespace: flux-system
-  path: ./apps/podinfo/ex3-naive-prod-semver-automation
+  path: ./apps/podinfo/ex03-naive-prod-semver-automation
   prune: true
   serviceAccountName: ex3
   sourceRef:
