@@ -19,4 +19,4 @@ patchesStrategicMerge:
 images:
 - name: ghcr.io/kingdonb/podinfo
   newName: ghcr.io/kingdonb/podinfo # {"$imagepolicy": "ex1:dev-policy:name"}
-  newTag: helmrelease-testing-1647528617-1658bee3 # {"$imagepolicy": "ex1:dev-policy:tag"}
+  newTag: track-stefanprodan-1649520994-7be820b0 # {"$imagepolicy": "ex1:dev-policy:tag"}
