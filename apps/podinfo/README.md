@@ -98,7 +98,7 @@ via `HelmRelease.spec.values`.
 This works much like any Helm user does imperatively with `helm upgrade --set`
 or `helm install --values`. Now, about those values...
 
-### Best Example - HelmRelease with Kustomize ConfigMap Generator
+### ~Best Example~ - HelmRelease with Kustomize ConfigMap Generator
 
 * `ex06-helmrelease-from-gitrepo-with-gitvalues/` -
   [link](https://github.com/kingdonb/github-actions-demo/tree/main/apps/podinfo/ex06-helmrelease-from-gitrepo-with-gitvalues)
@@ -131,6 +131,30 @@ want to combine these two, in other words, in order to use `ImageUpdateAutomatio
 to drive `HelmRelease` upgrades. What conditions must be satisfied in order to
 make this work, is left as an exercise for the reader.)
 
+### HelmRelease from GitRepo with Git Image Automation and No Helm Repository
+
+* `ex07-helmrelease-from-gitrepo-with-gitspec/` -
+  [link](https://github.com/kingdonb/github-actions-demo/tree/main/apps/podinfo/ex07-helmrelease-from-gitrepo-with-gitspec)
+
+This example was added later, as a nod to the upcoming OCI repository support
+in Flux. If you are able to maintain your helm chart in a Git repository with
+Chart version and App version kept synced, then you are in a good place already.
+
+We can do better than either of Examples 4 or 6, and with no need to publish
+charts in a Helm Repository as Example 5 requires. This example also provides
+some great benefits to centralization and policy control. It becomes clearer
+what will need to happen in order to make this approach work with multi-tenancy
+in a safe way.
+
+We should consider next if each namespace really needs a copy of the read-write
+Git deploy secret, whether they can be distributed from a central manager, or
+if they should really be distributed at all.
+
+(Maybe it's better to keep the sensitive credential more centrally.)
+
+Stay tuned for later examples where a different model can reduce boilerplate!
+
+
 ## GitHub Actions
 
 For the GitHub Actions examples, see:
@@ -142,7 +166,6 @@ For the GitHub Actions examples, see:
 
 ##### Bonus Edition: Manifest and Boilerplate Generation
 
-ex07-helmrelease-from-gitrepo-with-gitspec/
-ex08-image-automation-without-boilerplate/
-ex09-helmrelease-gitrepo-automated-imagely/
-ex10-git-monorepo-helmchart-successfully/
+* `ex08-image-automation-without-boilerplate`
+* `ex09-helmrelease-gitrepo-automated-imagely`
+* `ex10-git-monorepo-helmchart-successfully`
