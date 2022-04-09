@@ -33,5 +33,5 @@ spec:
   serviceAccountName: ex7
   sourceRef:
     kind: GitRepository
-    name: ex7
+    name: ex7-writable
 
