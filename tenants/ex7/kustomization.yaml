@@ -3,9 +3,3 @@ kind: Kustomization
 namespace: ex7
 resources:
 - sync.yaml
-configMapGenerator:
-  - name: podinfo-config
-    literals:
-    - SEMVER_TAG=6.0.6
-configurations:
-  - kustomizeconfig.yaml

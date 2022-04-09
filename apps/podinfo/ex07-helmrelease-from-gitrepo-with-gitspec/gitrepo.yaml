@@ -7,5 +7,5 @@ metadata:
 spec:
   interval: 1m0s
   ref:
-    semver: ${VERSION}
+    semver: ${SEMVER_TAG}
   url: https://github.com/kingdonb/podinfo.git
