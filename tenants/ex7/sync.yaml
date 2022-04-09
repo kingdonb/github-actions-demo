@@ -26,7 +26,7 @@ spec:
   path: ./apps/podinfo/ex07-helmrelease-from-gitrepo-with-gitspec
   postBuild:
     substitute:
-      SEMVER_TAG: 6.0.6 # {"$imagepolicy": "ex7:latest-release:tag"}
+      SEMVER_TAG: 6.1.1 # {"$imagepolicy": "ex7:latest-release:tag"}
   prune: true
   serviceAccountName: ex7
   sourceRef:
