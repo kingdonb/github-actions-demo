@@ -19,4 +19,4 @@ patchesStrategicMerge:
 images:
 - name: ghcr.io/kingdonb/podinfo
   newName: ghcr.io/kingdonb/podinfo # {"$imagepolicy": "ex1:dev-policy:name"}
-  newTag: dev-1649631928-2d6620a3 # {"$imagepolicy": "ex1:dev-policy:tag"}
+  newTag: dev-1649635057-d72da043 # {"$imagepolicy": "ex1:dev-policy:tag"}
