@@ -6,4 +6,4 @@ metadata:
   namespace: ex1
 spec:
   image: ghcr.io/kingdonb/podinfo
-  interval: 1m0s
+  interval: 15s

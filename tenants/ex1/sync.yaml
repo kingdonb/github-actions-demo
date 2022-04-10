@@ -5,7 +5,7 @@ metadata:
   name: ex1
   namespace: ex1
 spec:
-  interval: 1m0s
+  interval: 30s
   ref:
     branch: main
   url: https://github.com/kingdonb/github-actions-demo
@@ -18,7 +18,7 @@ metadata:
   namespace: ex1
 spec:
   suspend: false
-  interval: 1m0s
+  interval: 10m0s
   timeout: 15s
   dependsOn:
     - name: flux-system

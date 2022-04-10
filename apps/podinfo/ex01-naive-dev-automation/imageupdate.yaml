@@ -4,7 +4,7 @@ metadata:
   name: dev-update
   namespace: ex1
 spec:
-  interval: 1m0s
+  interval: 30s
   sourceRef:
     kind: GitRepository
     name: flux-system
