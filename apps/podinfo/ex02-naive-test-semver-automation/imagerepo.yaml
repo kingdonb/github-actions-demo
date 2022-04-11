@@ -5,5 +5,5 @@ metadata:
   name: podinfo
   namespace: ex2
 spec:
-  image: ghcr.io/kingdonb/podinfo
-  interval: 1m0s
+  image: img.hephy.pro/podinfo/releases
+  interval: 15s

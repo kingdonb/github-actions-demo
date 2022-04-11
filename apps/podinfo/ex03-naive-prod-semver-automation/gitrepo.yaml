@@ -7,5 +7,5 @@ metadata:
 spec:
   interval: 15s
   ref:
-    branch: flux-gha-demo
+    branch: master
   url: https://github.com/kingdonb/podinfo

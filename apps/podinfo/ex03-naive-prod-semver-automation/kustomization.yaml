@@ -17,6 +17,6 @@ patchesStrategicMerge:
   metadata:
     name: production
 images:
-- name: ghcr.io/kingdonb/podinfo
-  newName: ghcr.io/kingdonb/podinfo # {"$imagepolicy": "ex3:prod-policy:name"}
+- name: img.hephy.pro/podinfo/releases
+  newName: img.hephy.pro/podinfo/releases # {"$imagepolicy": "ex3:prod-policy:name"}
   newTag: 6.1.1 # {"$imagepolicy": "ex3:prod-policy:tag"}

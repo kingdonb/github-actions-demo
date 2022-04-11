@@ -8,7 +8,7 @@ resources:
 - imagepolicy.yaml
 - imageupdate.yaml
 - flux-system-gitrepo.yaml
-- github.com/kingdonb/podinfo//deploy/overlays/staging?ref=flux-gha-demo
+- github.com/kingdonb/podinfo//deploy/overlays/staging?ref=master
 patchesStrategicMerge:
 - |-
   $patch: delete
@@ -17,6 +17,6 @@ patchesStrategicMerge:
   metadata:
     name: staging
 images:
-- name: ghcr.io/kingdonb/podinfo
-  newName: ghcr.io/kingdonb/podinfo # {"$imagepolicy": "ex2:stg-policy:name"}
+- name: img.hephy.pro/podinfo/releases
+  newName: img.hephy.pro/podinfo/releases # {"$imagepolicy": "ex2:stg-policy:name"}
   newTag: 6.1.1 # {"$imagepolicy": "ex2:stg-policy:tag"}
