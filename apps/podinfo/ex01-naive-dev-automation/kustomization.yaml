@@ -18,5 +18,5 @@ patchesStrategicMerge:
     name: dev
 images:
 - name: img.hephy.pro/podinfo/releases
-  newName: img.hephy.pro/podinfo/fixme # {"$imagepolicy": "ex1:dev-policy:name"}
-  newTag: dev-1649678113-a752b949 # {"$imagepolicy": "ex1:dev-policy:tag"}
+  newName: img.hephy.pro/podinfo/pull-requests # {"$imagepolicy": "ex1:dev-policy:name"}
+  newTag: dev-1649678510-cfad64d8 # {"$imagepolicy": "ex1:dev-policy:tag"}
