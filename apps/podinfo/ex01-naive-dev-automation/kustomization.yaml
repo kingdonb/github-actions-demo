@@ -17,6 +17,6 @@ patchesStrategicMerge:
   metadata:
     name: dev
 images:
-- name: ghcr.io/kingdonb/podinfo
-  newName: ghcr.io/kingdonb/podinfo # {"$imagepolicy": "ex1:dev-policy:name"}
+- name: img.hephy.pro/podinfo/releases
+  newName: img.hephy.pro/podinfo/fixme # {"$imagepolicy": "ex1:dev-policy:name"}
   newTag: dev-1649678113-a752b949 # {"$imagepolicy": "ex1:dev-policy:tag"}
