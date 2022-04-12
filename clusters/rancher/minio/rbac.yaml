@@ -8,6 +8,14 @@ metadata:
 
 ---
 apiVersion: v1
+kind: Namespace
+metadata:
+  labels:
+    toolkit.fluxcd.io/tenant: minio-flux
+  name: minio-tenant-1
+
+---
+apiVersion: v1
 kind: ServiceAccount
 metadata:
   labels:

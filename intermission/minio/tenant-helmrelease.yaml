@@ -1,0 +1,28 @@
+---
+apiVersion: helm.toolkit.fluxcd.io/v2beta1
+kind: HelmRelease
+metadata:
+  name: minio-operator
+  namespace: minio-system
+spec:
+  targetNamespace: minio-tenant-1
+  storageNamespace: minio-tenant-1
+  chart:
+    spec:
+      chart: tenant
+      sourceRef:
+        kind: HelmRepository
+        name: minio
+  interval: 1m0s
+  values:
+    ## MinIO Tenant Definition
+    tenants:
+      # Tenant name
+      - name: minio1
+        ## Registry location and Tag to download MinIO Server image
+        image:
+          repository: quay.io/minio/minio
+          tag: RELEASE.2022-01-08T03-11-54Z
+          pullPolicy: IfNotPresent
+        ## Customize namespace for tenant deployment
+        namespace: minio-tenant-1
