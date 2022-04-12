@@ -2,7 +2,7 @@
 apiVersion: helm.toolkit.fluxcd.io/v2beta1
 kind: HelmRelease
 metadata:
-  name: minio-operator
+  name: minio-tenant-1
   namespace: minio-system
 spec:
   targetNamespace: minio-tenant-1
