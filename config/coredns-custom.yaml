@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: coredns-custom
+  namespace: kube-system
+data:
+  example.server: |
+    hephy.pro {
+      hosts {
+          10.17.12.201 img.hephy.pro
+          fallthrough
+      }
+      whoami
+    }

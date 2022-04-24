@@ -1,0 +1,16 @@
+---
+apiVersion: kustomize.toolkit.fluxcd.io/v1beta2
+kind: Kustomization
+metadata:
+  name: synology-csi-driver
+  namespace: synology-csi
+spec:
+  interval: 1m0s
+  path: ./deploy/kubernetes/v1.23
+  prune: false
+  serviceAccountName: flux-sa
+  sourceRef:
+    kind: GitRepository
+    name: synology-csi
+  dependsOn:
+    - name: synology-csi-snapshotter
