@@ -1,0 +1,18 @@
+---
+apiVersion: kustomize.toolkit.fluxcd.io/v1beta2
+kind: Kustomization
+metadata:
+  name: synology-csi
+  namespace: flux-system
+spec:
+  suspend: false
+  interval: 1m0s
+  timeout: 15s
+  dependsOn:
+  - name: flux-system
+    namespace: flux-system
+  path: ./intermission/synology
+  prune: true
+  sourceRef:
+    kind: GitRepository
+    name: flux-system
