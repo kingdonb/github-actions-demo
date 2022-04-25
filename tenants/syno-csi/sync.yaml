@@ -5,7 +5,7 @@ metadata:
   name: synology-csi
   namespace: flux-system
 spec:
-  suspend: false
+  suspend: true
   interval: 1m0s
   timeout: 15s
   dependsOn:
