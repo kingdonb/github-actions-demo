@@ -1,0 +1,26 @@
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  annotations:
+    meta.helm.sh/release-name: wordpress
+    meta.helm.sh/release-namespace: default
+    volume.beta.kubernetes.io/storage-provisioner: csi.san.synology.com
+    volume.kubernetes.io/storage-provisioner: csi.san.synology.com
+  labels:
+    app.kubernetes.io/instance: wordpress
+    app.kubernetes.io/managed-by: Helm
+    app.kubernetes.io/name: wordpress
+    app.kubernetes.io/version: 5.9.3-apache
+    helm.sh/chart: wordpress-0.5.4
+    helm.toolkit.fluxcd.io/name: wordpress
+    helm.toolkit.fluxcd.io/namespace: default
+  name: wordpress
+  namespace: default
+spec:
+  accessModes:
+  - ReadWriteOnce
+  resources:
+    requests:
+      storage: 10Gi
+  storageClassName: synology-iscsi-storage
+  volumeName: pvc-1589d7e1-7ef2-458b-a74f-defc61caf13f

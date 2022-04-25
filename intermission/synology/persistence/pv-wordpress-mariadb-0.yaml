@@ -1,0 +1,19 @@
+apiVersion: v1
+kind: PersistentVolume
+metadata:
+  annotations:
+    pv.kubernetes.io/provisioned-by: csi.san.synology.com
+  name: pvc-d9263ad3-ff7c-4bb3-8382-a27e95741f9a
+spec:
+  accessModes:
+  - ReadWriteOnce
+  capacity:
+    storage: 10Gi
+  csi:
+    driver: csi.san.synology.com
+    fsType: ext4
+    volumeAttributes:
+      dsm: 10.17.12.109
+      storage.kubernetes.io/csiProvisionerIdentity: 1650890726526-8081-csi.san.synology.com
+    volumeHandle: 264b3cec-b285-44c4-b35d-a8c6075e5efa
+  storageClassName: synology-iscsi-storage

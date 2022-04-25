@@ -1,0 +1,19 @@
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  annotations:
+    volume.beta.kubernetes.io/storage-provisioner: csi.san.synology.com
+    volume.kubernetes.io/storage-provisioner: csi.san.synology.com
+  labels:
+    app.kubernetes.io/instance: wordpress
+    app.kubernetes.io/name: mariadb
+  name: db-volume-wordpress-mariadb-0
+  namespace: default
+spec:
+  accessModes:
+  - ReadWriteOnce
+  resources:
+    requests:
+      storage: 10Gi
+  storageClassName: synology-iscsi-storage
+  volumeName: pvc-d9263ad3-ff7c-4bb3-8382-a27e95741f9a

@@ -5,3 +5,7 @@ resources:
 - synology-csi-gitrepo.yaml
 - synology-csi-snapshotter-ks.yaml
 - pv-demo-wordpress-ks.yaml
+- persistence/db-volume-wordpress-mariadb-0-pvc.yaml
+- persistence/pv-wordpress-mariadb-0.yaml
+- persistence/pv-wordpress.yaml
+- persistence/wordpress-pvc.yaml
