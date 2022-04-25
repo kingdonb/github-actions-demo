@@ -4,3 +4,4 @@ resources:
 - synology-csi-driver-ks.yaml
 - synology-csi-gitrepo.yaml
 - synology-csi-snapshotter-ks.yaml
+- pv-demo-wordpress-ks.yaml
