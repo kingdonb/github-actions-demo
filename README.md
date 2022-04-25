@@ -70,6 +70,20 @@ flux bootstrap github              \
   --components-extra=image-automation-controller,image-reflector-controller
 ```
 
+Finally `git pull` or `clone` the fork, uncomment the examples in `clusters/rancher/tenants.yaml`, commit
+and push the change, then watch Flux spring into action with your preferred K8s user interface of choice.
+
+Be sure to check out:
+
+* the RBAC definitions in each example folder `ex1`, `ex2`, etc. including namespaces
+* the Tenants in `/tenants` – a Kustomize overlay, a `GitRepository`, and a Flux `Kustomization`
+* the `sync.yaml` definition in each tenant: note how the structure changes in `ex7`
+* the `/apps/podinfo` directory, the README there, and the files in each subdirectory
+
+Some other highlights to become familiar with the structure of the examples:
+
+* run `tree`
+
 #### Other Notes
 
 The structure of this repository is based on:
@@ -83,13 +97,15 @@ If you are totally new to Flux, this demo may not cover all concepts well (so st
 * [Flux Core Concepts](https://fluxcd.io/docs/concepts/)
 * [Get Started with Flux](https://fluxcd.io/docs/get-started/)
 
-If you've seen our Get Started examples before, a basic Helm and Kustomize example with Staging and Production follows:
+If you've seen our Get Started examples before, a basic Helm and Kustomize example with Staging
+and Production follows:
 
 * [Flux Helm/Kustomize Example](https://github.com/fluxcd/flux2-kustomize-helm-example)
 
 The `podinfo` examples in this repository show a few different methods of automating delivery with Flux.
 
-The Podinfo repository drives GitHub Actions. This is a combined demonstration of GitHub Actions and Flux.
+The Podinfo repository drives GitHub Actions to build container images and publish Helm charts. This
+is a combined demonstration of GitHub Actions and Flux.
 
 Find the podinfo fork that I have marked up with those examples [here](https://github.com/kingdonb/podinfo/tree/master/.github/workflows#readme).
 
