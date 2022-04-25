@@ -5,7 +5,9 @@ metadata:
   name: pv-demo-wordpress
   namespace: synology-csi
 spec:
-  interval: 1m0s
+  interval: 10m0s
+  timeout: 2m45s
+  retryInterval: 3m0s
   path: ./pv-demo
   prune: true
   wait: true
