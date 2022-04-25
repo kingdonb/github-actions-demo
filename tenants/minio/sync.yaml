@@ -17,7 +17,7 @@ metadata:
   name: minio
   namespace: minio-system
 spec:
-  suspend: false
+  suspend: true
   interval: 1m0s
   timeout: 15s
   dependsOn:
