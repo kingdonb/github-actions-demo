@@ -150,6 +150,7 @@ USER=kingdonb
 mkdir -p "/Users/$USER/.lima/k8s/conf"
 export KUBECONFIG="/Users/$USER/.lima/k8s/conf/kubeconfig.yaml"
 limactl shell k8s sudo cat /etc/kubernetes/admin.conf >$KUBECONFIG
+```
 
 ### Install GitOps Extension
 
@@ -233,7 +234,7 @@ GITHUB_SOURCE_FORKED=https://github.com/yebyen/gha-demo
 I have shortened the repository name for my fork, to conserve screen real-estate.
 
 You can bootstrap from an https URL, but Flux will always ask your permission to
-create a Read/Write deploy token unless you have set GITHUB_TOKEN and exported it.
+create a Read/Write deploy token unless you have set `GITHUB_TOKEN` and exported it.
 
 Besides creating a PAT in the way prescribed by Flux docs, you can also use gh cli
 for a token which does not expire or create a scoped lifetime for your deploy keys.
@@ -314,6 +315,9 @@ kustomize build flux-system --reorder=none | kubectl apply -f -
 This way you can avoid running `flux bootstrap` again, but still get the main
 ideals of a bootstrap installation (where Flux manages itself and Git is the
 single source of truth for Flux and everything underneath it!)
+
+To be clear, this is the **last time** you will ever have to run `kubectl apply`
+on this cluster! Now, Flux is managing itself via GitOps.
 
 #### What's Next
 
