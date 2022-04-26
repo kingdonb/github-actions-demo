@@ -23,6 +23,8 @@ patchesStrategicMerge:
     namespace: flux-system
   spec:
     interval: 1m
+    retryInterval: 20s
+    timeout: 30s
     patches:
     - target:
         version: v1
