@@ -5,8 +5,10 @@ metadata:
   namespace: flux-system
 spec:
   interval: 5m
+  timeout: 1m
   sourceRef:
     kind: GitRepository
     name: flux-system
   path: ./tenants/ex1
   prune: true
+  wait: true
