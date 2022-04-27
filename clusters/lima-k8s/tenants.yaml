@@ -4,6 +4,7 @@ metadata:
   name: tenant-ex1
   namespace: flux-system
 spec:
+  suspend: true
   interval: 5m
   timeout: 1m
   sourceRef:
