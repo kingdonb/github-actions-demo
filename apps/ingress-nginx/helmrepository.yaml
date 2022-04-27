@@ -1,11 +1,9 @@
 ---
 apiVersion: source.toolkit.fluxcd.io/v1beta2
-kind: GitRepository
+kind: HelmRepository
 metadata:
-  name: podinfo
+  name: ingress-nginx
   namespace: flux-system
 spec:
   interval: 1m0s
-  ref:
-    branch: master
-  url: https://github.com/kingdonb/podinfo
+  url: https://kubernetes.github.io/ingress-nginx

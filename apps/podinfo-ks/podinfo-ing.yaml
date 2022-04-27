@@ -1,0 +1,28 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  annotations:
+    meta.helm.sh/release-name: podinfo
+    meta.helm.sh/release-namespace: podinfo
+  labels:
+    app.kubernetes.io/managed-by: Helm
+    app.kubernetes.io/name: podinfo
+    app.kubernetes.io/version: 6.0.6
+    helm.sh/chart: podinfo-6.0.6
+    helm.toolkit.fluxcd.io/name: podinfo
+    helm.toolkit.fluxcd.io/namespace: podinfo
+  name: podinfo
+  namespace: podinfo
+spec:
+  ingressClassName: nginx
+  rules:
+  - host: podinfo.local
+    http:
+      paths:
+      - backend:
+          service:
+            name: podinfo
+            port:
+              number: 9898
+        path: /
+        pathType: ImplementationSpecific

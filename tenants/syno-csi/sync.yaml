@@ -6,7 +6,8 @@ metadata:
   namespace: flux-system
 spec:
   suspend: false
-  interval: 1m0s
+  interval: 10m0s
+  retryInterval: 1m30s
   timeout: 15s
   dependsOn:
   - name: flux-system
@@ -16,13 +17,3 @@ spec:
   sourceRef:
     kind: GitRepository
     name: flux-system
-  patches:
-  - patch: |
-      $patch: delete
-      apiVersion: v1
-      kind: Namespace
-      metadata:
-        name: all
-    target:
-      kind: Namespace
-      name: synology-csi

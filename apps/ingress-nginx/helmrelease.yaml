@@ -1,0 +1,36 @@
+---
+apiVersion: helm.toolkit.fluxcd.io/v2beta1
+kind: HelmRelease
+metadata:
+  name: ingress-nginx
+  namespace: flux-system
+spec:
+  timeout: 1m0s
+  releaseName: ingress
+  values:
+    controller:
+      ingressClassResource:
+        default: true
+      service:
+        type: ClusterIP
+      kind: DaemonSet
+      hostNetwork: true
+      hostPort:
+        enabled: true
+  chart:
+    spec:
+      chart: ingress-nginx
+      reconcileStrategy: ChartVersion
+      sourceRef:
+        kind: HelmRepository
+        name: ingress-nginx
+  interval: 10m0s
+  targetNamespace: ingress-nginx
+  storageNamespace: ingress-nginx
+  install:
+    createNamespace: true
+    remediation:
+      retries: 3
+  upgrade:
+    remediation:
+      remediateLastFailure: false

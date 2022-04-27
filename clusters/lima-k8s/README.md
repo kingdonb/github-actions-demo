@@ -16,6 +16,12 @@ inspect it. Then, when you have determined if it is customized enough for you, r
 kustomize build flux-system --reorder=none | kubectl apply -f -
 ```
 
+If you get an error related to GitRepository and Kustomization at the end, you may
+simply need to run this command a second time.
+
+(Please fork it, customize the URLs to match yours in `gotk-sync.yaml` and in the
+flux-system `kustomization.yaml` files, inspect, upgrade, clave apart, hack, etc.)
+
 #### Aside for Flux Bootstrap
 
 A word about Flux Bootstrap - this is where Flux is managing Flux. There are projects
@@ -40,7 +46,7 @@ closed-source or proprietary product.
 
 ### Preamble
 
-* Disclaimer/confession: I still don't really like using VScode
+* Disclaimer/confession: I still don't really know if I like using VScode
 
 I think that many people in the audience are heavy terminal users like myself
 I have my terminal set up "just so" and it is very important to how I work
