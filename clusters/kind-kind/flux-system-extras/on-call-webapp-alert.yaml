@@ -7,7 +7,7 @@ spec:
   providerRef:
     name: slack
   eventSeverity: info
-  summary: lima-k8s Local DEV
+  summary: kind-kind Local DEV
   exclusionList:
     - '^Dependencies do not meet ready condition, retrying in \d+s$'
   eventSources:
