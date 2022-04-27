@@ -1,0 +1,26 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: webhook-receiver
+  namespace: flux-system
+  annotations: {}
+    #cert-manager.io/cluster-issuer: letsencrypt-production
+    #nginx.ingress.kubernetes.io/force-ssl-redirect: "false"
+    #nginx.ingress.kubernetes.io/ssl-redirect: "false"
+spec:
+  ingressClassName: nginx
+  rules:
+  - host: lima-k8s.hephy.pro
+    http:
+      paths:
+      - path: /
+        pathType: Prefix
+        backend:
+          service:
+            name: webhook-receiver
+            port:
+              number: 80
+  #tls:
+  #- hosts:
+  #  - lima-k8s.hephy.pro
+  #  secretName: lima-k8s-hephy-pro-tls
