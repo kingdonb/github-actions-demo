@@ -9,6 +9,8 @@ spec:
   releaseName: ingress
   values:
     controller:
+      ingressClassResource:
+        default: true
       service:
         type: ClusterIP
       kind: DaemonSet
