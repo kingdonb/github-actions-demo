@@ -1,0 +1,33 @@
+# apiVersion: notification.toolkit.fluxcd.io/v1beta1
+# kind: Provider
+# metadata:
+#   name: flux-sync
+#   namespace: flux-system
+# spec:
+#   type: github
+#   address: https://github.com/yebyen/gha-demo
+#   secretRef:
+#     name: github-bootstrap-token
+# ---
+# apiVersion: notification.toolkit.fluxcd.io/v1beta1
+# kind: Alert
+# metadata:
+#   name: bootstrap-repo
+#   namespace: flux-system
+# spec:
+#   providerRef:
+#     name: flux-sync
+#   eventSeverity: info
+#   eventSources:
+#     - kind: Kustomization
+#       name: infrastructure
+#       namespace: flux-system
+#     - kind: Kustomization
+#       name: metallb
+#       namespace: flux-system
+#     - kind: Kustomization
+#       name: my-secrets
+#       namespace: flux-system
+#     - kind: Kustomization
+#       name: cluster-api-secrets
+#       namespace: flux-system

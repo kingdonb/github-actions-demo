@@ -17,8 +17,9 @@ metadata:
   name: ex1
   namespace: ex1
 spec:
-  suspend: false
+  suspend: true
   interval: 10m0s
+  retryInterval: 2m0s
   timeout: 15s
   dependsOn:
     - name: flux-system
@@ -29,4 +30,3 @@ spec:
   sourceRef:
     kind: GitRepository
     name: ex1
-
