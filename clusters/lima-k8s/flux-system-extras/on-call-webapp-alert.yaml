@@ -37,3 +37,13 @@ spec:
     - kind: HelmRelease
       namespace: ex1
       name: '*'
+
+    - kind: GitRepository
+      namespace: podinfo
+      name: '*'
+    - kind: Kustomization
+      namespace: podinfo
+      name: '*'
+    - kind: HelmRelease
+      namespace: podinfo
+      name: '*'
