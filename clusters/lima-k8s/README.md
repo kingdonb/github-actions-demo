@@ -119,7 +119,8 @@ complete -F __start_kubectl k
 Make sure your `.bash_aliases` is loaded after 
 
 (az cli offers tab completion)
-flux CLI offers tab completion also
+
+**flux CLI offers** tab completion also
 
 #### Why should I use the Flux CLI?
 
@@ -179,8 +180,8 @@ If you have Homebrew, and want Flux to keep updated, better to install it this w
 $ brew install fluxcd/tap/flux
 ```
 
-The VScode extension currently doesn't update Flux. It can install the Flux CLI for
-you though, in case you don't have Homebrew.
+The VScode extension doesn't update Flux. It can install the latest version of the
+Flux CLI for you though, in case you don't have Homebrew. (We recommend Homebrew.)
 
 (Ed: Add a screenshot of "Install Flux")
 

@@ -13,6 +13,8 @@ patchesStrategicMerge:
   spec:
     url: https://github.com/yebyen/gha-demo
     interval: 20s
+    secretRef:
+      $patch: delete
     # includes:
     # ... podinfo
 - |-
