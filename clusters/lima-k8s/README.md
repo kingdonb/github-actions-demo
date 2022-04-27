@@ -7,6 +7,8 @@
 * Walkthrough installing Flux onto the temporary cluster
 * How does this differ from using Flux Bootstrap
 
+tl;dr: To skip the preamble, [Install GitOps Extension](#install-gitops-extension)
+
 #### Aside for Flux Bootstrap
 
 A word about Flux Bootstrap - this is where Flux is managing Flux. There are projects
