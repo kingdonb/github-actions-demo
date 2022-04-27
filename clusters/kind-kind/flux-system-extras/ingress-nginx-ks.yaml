@@ -8,6 +8,7 @@ spec:
   interval: 1m0s
   path: ./apps/ingress-nginx
   prune: false
+  wait: true
   sourceRef:
     kind: GitRepository
     name: flux-system
