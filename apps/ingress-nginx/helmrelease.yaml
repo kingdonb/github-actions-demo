@@ -15,6 +15,7 @@ spec:
         name: ingress-nginx
   interval: 10m0s
   targetNamespace: ingress-nginx
+  storageNamespace: ingress-nginx
   install:
     createNamespace: true
     remediation:
