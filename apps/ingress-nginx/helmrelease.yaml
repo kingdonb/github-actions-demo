@@ -6,6 +6,7 @@ metadata:
   namespace: flux-system
 spec:
   timeout: 1m0s
+  releaseName: ingress
   values:
     controller:
       kind: DaemonSet
