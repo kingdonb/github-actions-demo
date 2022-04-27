@@ -9,6 +9,13 @@
 
 tl;dr: To skip the preamble, [Install GitOps Extension](#install-gitops-extension)
 
+Super-tldr; Find the `flux-system` directory that has been bootstrapped already, and
+inspect it. Then, when you have determined if it is customized enough for you, run:
+
+```shell
+kustomize build flux-system --reorder=none | kubectl apply -f -
+```
+
 #### Aside for Flux Bootstrap
 
 A word about Flux Bootstrap - this is where Flux is managing Flux. There are projects
