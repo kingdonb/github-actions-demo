@@ -6,6 +6,12 @@ metadata:
   namespace: flux-system
 spec:
   timeout: 1m0s
+  values:
+    controller:
+      kind: DaemonSet
+      hostNetwork: true
+      hostPort:
+        enabled: true
   chart:
     spec:
       chart: ingress-nginx
