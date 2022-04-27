@@ -8,8 +8,8 @@ spec:
     name: slack
   eventSeverity: info
   summary: lima-k8s Local DEV
-  #exclusionList:
-  #  - '^Dependencies do not meet ready condition, retrying in \d+s$'
+  exclusionList:
+    - '^Dependencies do not meet ready condition, retrying in \d+s$'
   eventSources:
     - kind: GitRepository
       name: '*'
