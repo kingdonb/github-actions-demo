@@ -24,6 +24,8 @@ spec:
   dependsOn:
     - name: flux-system
       namespace: flux-system
+    - name: nginx
+      namespace: flux-system
   path: ./apps/podinfo/ex01-naive-dev-automation
   prune: true
   serviceAccountName: ex1
