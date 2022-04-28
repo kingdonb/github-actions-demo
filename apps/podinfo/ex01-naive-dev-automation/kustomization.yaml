@@ -4,18 +4,20 @@ namespace: ex1
 resources:
 - ingress.yaml
 - gitrepo.yaml
-- imagerepo.yaml
-- imagepolicy.yaml
-- imageupdate.yaml
+#- imagerepo.yaml
+#- imagepolicy.yaml
+#- imageupdate.yaml
 - flux-system-gitrepo.yaml
-- github.com/kingdonb/podinfo//deploy/overlays/dev?ref=master
-patchesStrategicMerge:
-- |-
-  $patch: delete
-  apiVersion: v1
-  kind: Namespace
-  metadata:
-    name: dev
+# FIXME: Remote Reference: do not use, risk ++ performance --
+#- github.com/kingdonb/podinfo//deploy/overlays/dev?ref=master
+
+# patchesStrategicMerge:
+# - |-
+#   $patch: delete
+#   apiVersion: v1
+#   kind: Namespace
+#   metadata:
+#     name: dev
 images:
 - name: img.hephy.pro/podinfo/releases
   newName: img.hephy.pro/podinfo/pull-requests # {"$imagepolicy": "ex1:dev-policy:name"}
