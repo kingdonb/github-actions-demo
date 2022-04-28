@@ -1,12 +1,12 @@
-apiVersion: source.toolkit.fluxcd.io/v1beta1
-kind: GitRepository
-metadata:
-  name: flux-system
-  namespace: ex1
-spec:
-  interval: 1m0s
-  ref:
-    branch: main
-  # secretRef:
-  #   name: flux-system
-  url: ssh://git@github.com/kingdonb/github-actions-demo
+# apiVersion: source.toolkit.fluxcd.io/v1beta1
+# kind: GitRepository
+# metadata:
+#   name: flux-system
+#   namespace: ex1
+# spec:
+#   interval: 1m0s
+#   ref:
+#     branch: main
+#   # secretRef:
+#   #   name: flux-system
+#   url: ssh://git@github.com/kingdonb/github-actions-demo
