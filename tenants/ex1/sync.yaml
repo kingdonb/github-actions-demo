@@ -8,7 +8,7 @@ spec:
   interval: 30s
   ref:
     branch: main
-  url: https://github.com/kingdonb/github-actions-demo
+  url: https://github.com/yebyen/gha-demo
 
 ---
 apiVersion: kustomize.toolkit.fluxcd.io/v1beta2
@@ -17,7 +17,7 @@ metadata:
   name: ex1
   namespace: ex1
 spec:
-  suspend: true
+  suspend: false
   interval: 10m0s
   retryInterval: 2m0s
   timeout: 15s
