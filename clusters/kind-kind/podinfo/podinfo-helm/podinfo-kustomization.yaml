@@ -8,6 +8,9 @@ spec:
   interval: 1m0s
   path: ./deploy/helm-git
   prune: true
+  dependsOn:
+  - name: nginx
+    namespace: flux-system
   sourceRef:
     kind: GitRepository
     name: podinfo
