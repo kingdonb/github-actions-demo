@@ -5,7 +5,8 @@ metadata:
   name: nginx
   namespace: flux-system
 spec:
-  interval: 1m0s
+  interval: 3m0s
+  timeout: 2m0s
   path: ./apps/ingress-nginx
   prune: false
   wait: true
@@ -16,3 +17,6 @@ spec:
     - apiVersion: admissionregistration.k8s.io/v1
       kind: ValidatingWebhookConfiguration
       name: ingress-ingress-nginx-admission
+    - apiVersion: apps/v1
+      kind: DaemonSet
+      name: ingress-ingress-nginx-controller
