@@ -4,9 +4,9 @@ namespace: ex1
 resources:
 - ingress.yaml
 - gitrepo.yaml
-- imagerepo.yaml
-- imagepolicy.yaml
-- imageupdate.yaml
+#- imagerepo.yaml
+#- imagepolicy.yaml
+#- imageupdate.yaml
 - flux-system-gitrepo.yaml
 # FIXME: Remote Reference: do not use, risk ++ performance --
 #- github.com/kingdonb/podinfo//deploy/overlays/dev?ref=master
