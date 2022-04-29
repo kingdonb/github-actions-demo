@@ -7,6 +7,9 @@ spec:
   suspend: false
   interval: 5m
   timeout: 1m
+  dependsOn:
+  - name: nginx
+    namespace: flux-system
   sourceRef:
     kind: GitRepository
     name: flux-system

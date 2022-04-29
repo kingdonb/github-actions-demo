@@ -26,6 +26,20 @@ flux-system `kustomization.yaml` files, inspect, upgrade, clave apart, hack, etc
 
 [See lima-k8s/README.md for the advanced version to work with "intermission" example](/clusters/lima-k8s/README.md)
 
+### Install Flux (Enable GitOps)
+
+The first step is to verify that Flux can run on your cluster.
+
+```
+(⎈ |adm@k8s:default):~/gha-demo (main|u=)$ flux check --pre
+► checking prerequisites
+✗ flux 0.29.3 <0.29.4 (new version is available, please upgrade)
+✔ Kubernetes 1.23.6 >=1.20.6-0
+✔ prerequisites checks passed
+```
+
+If you don't have Flux installed yet, don't worry! The editor extension can help.
+
 #### Fork and Bootstrap Flux
 
 ```
@@ -97,6 +111,13 @@ single source of truth for Flux and everything underneath it!)
 
 To be clear, this is the **last time** you will ever have to run `kubectl apply`
 on this cluster! Now, Flux is managing itself via GitOps.
+
+### Install GitOps Extension
+
+(Ed: walk through installing the GitOps extension)
+
+* [Packaging and Installation](https://github.com/weaveworks/vscode-gitops-tools#packaging-and-installation)
+* [Releases and Pre-releases](https://github.com/weaveworks/vscode-gitops-tools/releases)
 
 #### What's Next
 
