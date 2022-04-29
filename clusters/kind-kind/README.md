@@ -94,6 +94,27 @@ You can make any changes in `kustomization.yaml`
 
 Here's how to override the bootstrap URL with another one by patching
 
+```
+# flux-system/kustomization.yaml
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+resources:
+- gotk-components.yaml
+- gotk-sync.yaml
+patchesStrategicMerge:
+- |-
+  apiVersion: source.toolkit.fluxcd.io/v1beta2
+  kind: GitRepository
+  metadata:
+    name: flux-system
+    namespace: flux-system
+  spec:
+    url: https://github.com/kingdonb/gha-demo
+    interval: 20s
+    secretRef:
+      $patch: delete
+```
+
 (We do this to avoid the need to use a deploy key of any kind with a public repo.)
 
 This way you can install Flux from Git without involving your Git provider in the
