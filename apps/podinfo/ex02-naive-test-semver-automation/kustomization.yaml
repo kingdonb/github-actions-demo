@@ -19,4 +19,4 @@ patchesStrategicMerge:
 images:
 - name: img.hephy.pro/podinfo/releases
   newName: img.hephy.pro/podinfo/releases # {"$imagepolicy": "ex2:stg-policy:name"}
-  newTag: 6.1.2 # {"$imagepolicy": "ex2:stg-policy:tag"}
+  newTag: 6.1.4 # {"$imagepolicy": "ex2:stg-policy:tag"}
